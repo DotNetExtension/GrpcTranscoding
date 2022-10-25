@@ -7,6 +7,7 @@
     <Company>Andrew Babbitt</Company>
     <Product>gRPC Transcoding</Product>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/AndrewBabbitt97/GrpcTranscoding</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/AndrewBabbitt97/GrpcTranscoding/releases</PackageReleaseNotes>
     <Description>Protobufs Needed for gRPC Transcoding</Description>
@@ -26,6 +27,10 @@
       <PackagePath></PackagePath>
     </None>
     <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
