@@ -7,7 +7,7 @@ on:
 jobs:
   release:
     name: Release Project
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Check out Git repository
@@ -34,7 +34,7 @@ jobs:
         run: dotnet pack -c Release -p:Version=${{ github.event.release.tag_name }} -o bin/release
 
       - name: Push Packages
-        run: dotnet nuget push 'bin\release\*.*' --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+        run: dotnet nuget push 'bin/release/*.*' --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
 
       - name: Update release
         uses: ncipollo/release-action@v1
